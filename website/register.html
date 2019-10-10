@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+	<title> Gaming </title>
+	<link href = "css/style.css" rel="stylesheet" type="text/css" />
+    
+    <script>
+	function validateRForm() {
+		var x = document.forms["myRegisterForm"]["username"].value;
+		if (x == null || x == "")  {
+			alert("Username required.");
+			return false;
+		}
+		var y = document.forms["myRegisterForm"]["firstname"].value;
+		if (y == null || y == "")  {
+			alert("First Name required.");
+			return false;
+		}
+		var z = document.forms["myRegisterForm"]["lastname"].value;
+		if (z == null || z == "")  {
+			alert("Last Name required.");
+			return false;
+		}
+		var a = document.forms["myRegisterForm"]["emailaddress"].value;
+		if (a == null || a == "")  {
+			alert("Email Address required.");
+			return false;
+		}
+		var b = document.forms["myRegisterForm"]["subject"].value;
+		if (b == null || b == "")  {
+			alert("Subject must be filled out");
+
+			return false;
+		}
+
+		var c = document.forms["myRegisterForm"]["password"].value;
+		if (c == null || c == "")  {
+			alert("Password required.");
+
+			return false;
+		}
+	}
+	
+	function checkPass(){
+		var pass1 = document.getElementById('password');
+    	var pass2 = document.getElementById('cpassword');
+		var goodColor = "#66cc66";
+    	var badColor = "#ff6666";
+  		if(pass1.value == pass2.value){
+    		pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match!";
+  		 }else{
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!";
+    }
+}  
+
+	</script>
+    
+	
+</head>
+
+<body>
+<div class = "header"> 
+	<div class = "headerlogo"> <img src="images/logo2.png" height = "100%" width ="100%" alt ="Gamers' Union Logo">   </div> 
+	<div class ="headerslogan"> Where Gaming Truly Matters </div>
+    <div class ="headerloginbox"> <span class="login"><a href="login.html"> Login</a></span> </div>
+	<div class ="headernav">
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="impact.html">Impact of Gaming</a></li>
+	<li><a href="older.html">The Classics</a></li>
+    <li><a href="younger.html">Educational Gaming</a></li>
+    <li><a href="female.html">eSports</a></li>
+    <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+    </div>
+</div>
+
+<div class = "main">
+	<div class = "registerheading"> Registration Page</div>
+	
+	<form class="box" id="new-form" method="post" action="input.php"" name="myRegisterForm" onsubmit="return validateRForm()">
+
+	
+	<label for="uname">Username:</label>
+      <br>
+      <input type="text"  id="username" name="username" autocomplete="off" tabindex="1" style="width:20%;height:5%;">
+      <br>
+      <label for="sname">First Name:</label>
+      <br>
+      <input type="text"  id="firstname" name="firstname" autocomplete="off" tabindex="1" style="width:20%;height:5%;"   >
+      <br>
+      <label for="sname">Last name:</label>
+      <br>
+      <input type="text"  id="lastname" name="lastname" autocomplete="off" tabindex="1" style="width:20%;height:5%;"   >
+      <br>
+      <label for="email">Email Address:</label>
+      <br>
+      <input type="email" id="emailaddress" name="emailaddress" autocomplete="off" tabindex="1"  style="width:65%;height:5%;"    >
+      <br>
+      <label for="pass">Password:</label>
+      <br>
+      <input type="password"  id="password" name="password" autocomplete="off" tabindex="1" style="width:20%;height:5%;border-radius: 5px;" >
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+<label for="cpass"> Confirm Password:</label>
+<input type="password"  id="cpassword" name="cpassword" autocomplete="off" tabindex="1" style="width:20%;height:5%;border-radius: 5px;"  onKeyUp="checkPass(); return false;">
+    
+	
+	<div class ="registerbox">
+    <input type="submit" name="submit" id="submitbtn" tabindex="5" value="Register">
+	
+	</form>
+	</div>
+</div>
+
+
+<div class = "footer"> 
+	<div class ="followus"> Follow our Social Medias: </div>
+	<div class = "fblink"><a href="https://www.facebook.com/">	<img src="images/fb 	icon.png" border ="0" alt ="Facebook Link" max-width="100%" height="auto"> </a> </div> 
+	<div class = "twitlink"><a href="https://www.twitter.com/">	<img src="images/twitter icon.png" border ="0" alt ="Twitter Link" max-width="100%" height="auto"> </a> </div >
+    	<div class = "instalink"><a href="https://www.instagram.com/">	<img src="images/insta icon.jpg" border ="0" alt ="Instagram Link" max-width="100%" height="auto"> </a> </div> 
+</div>
+
+
+
+
+</body>
+<footer>
+</footer>
+</html>

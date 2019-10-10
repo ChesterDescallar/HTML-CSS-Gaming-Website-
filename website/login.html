@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+	<title> Gaming </title>
+	<link href = "css/style.css" rel="stylesheet" type="text/css" />
+    
+    <script>
+	function validateLForm() {
+		var x = document.forms["myLoginForm"]["username"].value;
+		if (x == null || x == "")  {
+			alert("Username required.");
+			return false;
+		}
+		var a = document.forms["myLoginForm"]["password"].value;
+		if (a == null || a == "")  {
+			alert("Password required.");
+			return false;
+		}
+
+	}
+
+	</script>
+	
+</head>
+
+<body>
+<div class = "header"> 
+	<div class = "headerlogo"> <img src="images/logo2.png" height = "100%" width ="100%" alt ="Gamers' Union Logo">   </div> 
+	<div class ="headerslogan"> Where Gaming Truly Matters </div>
+    <div class ="headerloginbox"> <span class="login"><a href="login.html"> Login</a></span> </div>
+	<div class ="headernav">
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="impact.html">Impact of Gaming</a></li>
+	<li><a href="older.html">The Classics</a></li>
+    <li><a href="younger.html">Educational Gaming</a></li>
+    <li><a href="female.html">eSports</a></li>
+    <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+    </div>
+</div>
+
+<div class = "main">
+	<div class = "loginheading"> Sign In</div>
+	
+	<form class="loginbox" id="new-form" method="post" action="register.php" name="myLoginForm" onsubmit="return validateLForm()">
+
+	
+	<label for="uname">Username: </label>
+    <input type="text"  id="username" name="username" height="100%" width="100%"  autocomplete="off" tabindex="1" ><br> 
+	
+	<label for="pass">Password: </label>
+    <br><input type="password"  id="password" name="password" autocomplete="off" tabindex="1" style="width:99.5%;height:9%;border-radius: 5px">
+ 
+	
+	<div class ="loginboxbtn">
+    <input type="submit" name="submit" id="submitbtn" tabindex="5" value="Log In">
+    </div>
+    <div class ="registerbtn">
+    <span class="rgstr"><a href="register.html"> Register</a></span>
+    </div>
+	</form>
+    
+  </div>
+</div>
+
+
+<div class = "footer"> 
+	<div class ="followus"> Follow our Social Medias: </div>
+	<div class = "fblink"><a href="https://www.facebook.com/">	<img src="images/fb 	icon.png" border ="0" alt ="Facebook Link" max-width="100%" height="auto"> </a> </div> 
+	<div class = "twitlink"><a href="https://www.twitter.com/">	<img src="images/twitter icon.png" border ="0" alt ="Twitter Link" max-width="100%" height="auto"> </a> </div >
+    	<div class = "instalink"><a href="https://www.instagram.com/">	<img src="images/insta icon.jpg" border ="0" alt ="Instagram Link" max-width="100%" height="auto"> </a> </div> 
+</div>
+
+
+
+
+</body>
+<footer>
+</footer>
+</html>
